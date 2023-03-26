@@ -14,4 +14,4 @@ function big(a,b){
     }
 }
 
-console.log(big(num))
+console.log(big(num));

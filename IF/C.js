@@ -12,4 +12,4 @@ function lol(a) {
     }
 }
 
-console.log(lol(12))
+console.log(lol(12));

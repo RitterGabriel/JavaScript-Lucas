@@ -9,4 +9,4 @@ function getMax(a, b){
     }
 }
 
-console.log(getMax(10, 6))
+console.log(getMax(10, 6));

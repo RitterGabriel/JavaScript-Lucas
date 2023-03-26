@@ -8,7 +8,7 @@ function media(a,b){
 }
 
 
-console.log(media(num)/3)
+console.log(media(num)/3);
 
 
 

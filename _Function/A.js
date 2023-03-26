@@ -6,5 +6,5 @@ function sum(a,b){
     return num1[0] + num1[1];
 }
 
-console.log(sum(num1))
+console.log(sum(num1));
 

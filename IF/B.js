@@ -13,4 +13,4 @@ function get(a){
     }
 }
 
-console.log(get(89))
+console.log(get(89));

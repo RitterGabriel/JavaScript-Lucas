@@ -14,4 +14,4 @@ function low(a,b){
     }
 }
 
-console.log(low(num))
+console.log(low(num));
