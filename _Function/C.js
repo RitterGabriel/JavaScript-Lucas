@@ -1,6 +1,6 @@
 //Crie uma função que recebe um array de números e retorna o maior valor.
 
-var num = [100, 210, 100]
+let num = [100, 210, 100]
 
 function big(a,b){
     if(num[0] > num[1] && num[0] > num[2]){

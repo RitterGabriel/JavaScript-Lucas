@@ -1,6 +1,6 @@
 //Crie uma função que recebe um array de números e retorna o menor valor.
 
-var num = [10, 210, 5]
+let num = [10, 210, 5]
 
 function low(a,b){
     if(num[0] < num[1] && num[0] < num[2]){
