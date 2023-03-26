@@ -1,4 +1,4 @@
-// a) Crie uma função que recebe dois números e retorna o maior deles. 
+//Crie uma função que recebe dois números e retorna o maior deles. 
 
 function getMax(a, b){
     if(a > b){

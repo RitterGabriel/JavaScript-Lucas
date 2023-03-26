@@ -1,4 +1,4 @@
-// b) Crie uma função que recebe um número e retorna "positivo" se o número for maior que zero, 
+//Crie uma função que recebe um número e retorna "positivo" se o número for maior que zero, 
 //"negativo" se o número for menor que zero, e "zero" se o número for igual a zero. 
 
 function get(a){
