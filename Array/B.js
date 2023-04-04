@@ -1,11 +1,36 @@
 //Crie um array de números e ordene-os em ordem decrescente
 
-num = [5, 4, 6, 1, 3, 2,];
+function Ordem(num) {
+    if (num[0] < num[1] && num[0] < num[2]) {
+        if (num[1] < num[2]) {
+            return [num[2], num[1], num[0]]
+        }
+         else {
+          return [num[1], num[2], num[0]]
+        }
+        
+    } else if (num[1] < num[0] && num[1] < num[2]) {
+        if (num[0] < num[2]) {
+            return [num[2], num[0], num[1]]
+        }
+        else{
+            return [num[0], num[2], num[1]]
+        }
 
-num.sort(function(a, b){
-    if (a < b) return 1;
-    if (a > b) return -1;
-    return 0
-});
-
-console.log(num)
+    } else {
+        if (num[2] < num[1] && num[2] < num[0]) {
+            if (num[1] < num[0]) {
+                return [num[0], num[1], num[2]]
+            } 
+            else{
+                return [num[1], num[0], num[2]]
+            }
+        
+        }
+    }
+  }
+  
+  
+  console.log(Ordem([2, 43, 3]))
+  
+ 
