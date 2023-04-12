@@ -8,15 +8,15 @@ let Carro = {
   cor: "vermelho",
   velocidadeAtual: 100,
 
-  acelerar: function()  {
-    Carro.velocidadeAtual += 50;
+  acelerar: function(velocidade)  {
+    Carro.velocidadeAtual += velocidade;
   },
 
-  frear: function() {
-    Carro.velocidadeAtual -= 20;
+  frear: function(velocidade) {
+    Carro.velocidadeAtual -= velocidade;
   },
 };
 
-Carro.acelerar();
-Carro.frear();
+Carro.acelerar(50);
+Carro.frear(20);
 console.log(Carro.velocidadeAtual);
