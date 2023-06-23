@@ -1,0 +1,69 @@
+import  { useState } from "react";
+import {
+  StyleSheet,
+  View,
+  Text,
+  TextInput
+} from "react-native";
+
+function App() {
+
+  let [getNumero, setNumero] = useState();
+  let [getNumero2, setNumero2] = useState();
+
+return (
+  <View style={estilo.container}>
+    <View>
+        <TextInput 
+          placeholder = "Digite o número 1: "
+          onChangeText = {(value) => setNumero(value)}
+          value = {getNumero}
+          style = {estilo.inputbox2}
+          placeholderTextColor = "black" 
+        />
+
+        <TextInput 
+          placeholder = "Digite o número 2: "
+          onChangeText = {(value) => setNumero2(value)}
+          value = {getNumero2}
+          style = {estilo.inputbox2}
+          placeholderTextColor = "black" 
+        />
+
+
+    </View>
+      <View>
+          <Text style={estilo.inputbox2} >Resultado: {parseFloat(getNumero) + parseFloat(getNumero2)}</Text>
+      </View>
+  </View>
+);
+}
+
+const estilo = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  inputbox2: {
+    width: 300,
+    padding: 10,
+    marginBottom: 10,
+    flexDirection: "row",
+    backgroundColor: "#5092DE",
+    borderRadius: 20,
+    borderColor: "#000",
+    borderWidth: 2
+  }
+});
+
+
+
+
+export default App
+
+
+
+
+
+
+
+
