@@ -1,69 +1,79 @@
-import  { useState } from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  TextInput
-} from "react-native";
+import { useState, useEffect } from 'react';
+import { StyleSheet, View, Text, TextInput } from 'react-native';
 
 function App() {
+  let [numero, setNumero] = useState();
+  let [numero2, setNumero2] = useState();
+  let [operator, setOperator] = useState();
+  let [result, setResult] = useState();
 
-  let [getNumero, setNumero] = useState();
-  let [getNumero2, setNumero2] = useState();
+  useEffect(() => {
+    function getResult() {
+      if (operator == '/' || operator == 'divisão') {
+        setResult(numero / numero2);
+      } else if (operator == '*' || operator == 'multiplicação') {
+        setResult(numero * numero2);
+      }
+      if (operator == '+' || operator == 'soma') {
+        setResult(Number(numero) + Number(numero2));
+      }
+      if (operator == '-' || operator == 'subtração') {
+        setResult(numero - numero2);
+      }
+    }
+    getResult(), [numero, numero2, result];
+  });
 
-return (
-  <View style={estilo.container}>
-    <View>
-        <TextInput 
-          placeholder = "Digite o n�mero 1: "
-          onChangeText = {(value) => setNumero(value)}
-          value = {getNumero}
-          style = {estilo.inputbox2}
-          placeholderTextColor = "black" 
-        />
-
-        <TextInput 
-          placeholder = "Digite o n�mero 2: "
-          onChangeText = {(value) => setNumero2(value)}
-          value = {getNumero2}
-          style = {estilo.inputbox2}
-          placeholderTextColor = "black" 
-        />
-
-
-    </View>
+  return (
+    <View style={estilo.container}>
       <View>
-          <Text style={estilo.inputbox2} >Resultado: {parseFloat(getNumero) + parseFloat(getNumero2)}</Text>
+        <TextInput
+          placeholder="Digite o número 1: "
+          onChangeText={(value) => setNumero(value)}
+          value={numero}
+          style={estilo.inputbox}
+          placeholderTextColor="black"
+        />
+
+        <TextInput
+          placeholder="Digite o operador: "
+          onChangeText={(value) => setOperator(value)}
+          value={operator}
+          style={estilo.inputbox}
+          placeholderTextColor="black"
+        />
+
+        <TextInput
+          placeholder="Digite o número 2: "
+          onChangeText={(value) => setNumero2(value)}
+          value={numero2}
+          style={estilo.inputbox}
+          placeholderTextColor="black"
+        />
       </View>
-  </View>
-);
+      <View>
+        <Text style={estilo.inputbox}>{`Resultado: ${result}`}</Text>
+      </View>
+    </View>
+  );
 }
 
 const estilo = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
   },
-  inputbox2: {
+  inputbox: {
     width: 300,
     padding: 10,
     marginBottom: 10,
-    flexDirection: "row",
-    backgroundColor: "#5092DE",
+    flexDirection: 'row',
+    backgroundColor: '#D3D3D3',
     borderRadius: 20,
-    borderColor: "#000",
-    borderWidth: 2
-  }
+    borderColor: '#FFFF',
+    borderWidth: 2,
+  },
 });
 
-
-
-
-export default App
-
-
-
-
-
-
-
-
+export default App;
